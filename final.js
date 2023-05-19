@@ -3,14 +3,13 @@ const jsonServer = require('json-server');
 
 const app = express();
 
-// Use json-server to serve the fake database
+
 app.use('/api', jsonServer.router('db.json'));
 
-// Define a custom route to get followers of a user
 app.get('/followers/:userId', (req, res) => {
   const { userId } = req.params;
 
-  // Fetch the user from the fake database
+
   const db = jsonServer.router('db.json');
   const user = db.db.get('users').find({ id: parseInt(userId) }).value();
 
