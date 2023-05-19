@@ -1,3 +1,4 @@
+//i tried to get the followers list through a form but was unsuccessfull to get the server resoponse as a data
 const express = require('express');
 const jsonServer = require('json-server');
 const { createReadStream } = require('fs');
