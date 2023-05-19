@@ -3,7 +3,6 @@ const jsonServer = require('json-server');
 
 const app = express();
 
-
 app.use('/api', jsonServer.router('db.json'));
 
 app.get('/followers/:userId', (req, res) => {
@@ -49,7 +48,7 @@ app.get('/followers/:userId', (req, res) => {
 });
 
 // Start the server
-const port = 3000;
+const port = 3030;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
