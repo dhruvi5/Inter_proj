@@ -47,6 +47,8 @@ app.get('/followers/:userId', (req, res) => {
   res.send(tableHtml);
 });
 
+//GET request to http://localhost:3000/followers/:userId
+
 // Start the server
 const port = 3030;
 app.listen(port, () => {
